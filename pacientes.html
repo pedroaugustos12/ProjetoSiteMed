@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assents/slidebar.css">
+    <link rel="stylesheet" href="assents/pacientes.css">
+    <title>Sidebar</title>
+</head>
+<body>
+    <nav id="sidebar">
+        <div id="sidebar_content">
+            <div id="user">
+                <img src="images/avatar2.webp" id="user_avatar" alt="Avatar">
+    
+                <p id="user_infos">
+                    <span class="item-description">
+                        Usuario Principal
+                    </span>
+                </p>
+            </div>
+    
+            <ul id="side_items">
+                <li class="side-item active">
+                    <a href="#">
+                        <i class="fa-solid fa-laptop-medical"></i>
+                        <span class="item-description">
+                            Prontuário
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item ">
+                    <a href="#">
+                        <i class="fa-solid fa-person"></i>
+                        <span class="item-description">
+                            Pacientes
+                        </span>
+                    </a>
+                </li>
+                
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span class="item-description">
+                            Agendamento
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-info"></i>
+                        <span class="item-description">
+                            Sobre
+                        </span>
+                    </a>
+                </li>
+    
+                
+            </ul>
+    
+            <button id="open_btn">
+                <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div id="logout">
+            <button id="logout_btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="item-description">
+                    Logout
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Incluir Pacientes</h2>
+     
+    
+        <div class="form-container">
+            <h4>Geral</h4>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+    
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+    
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" required>
+    
+                <h4>Telefone</h4>
+                <label for="telefone"></label>
+                <input type="tel" id="telefone" name="Telefone" required placeholder="Telefone">
+    
+                <label for="telefone"></label>
+                <input type="tel" id="telefone" name="telefone" required>
+    
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+
+
+
+
+</body>
+</html>
+    <script src="script-sidebar.js"></script>
+</body>
+</html>

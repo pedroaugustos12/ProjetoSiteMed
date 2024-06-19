@@ -5,22 +5,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
     height: 90vh;
-    width: 100vh;
+    width: 90vw;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login{
+.login {
     height: 80vh;
-    width: 100vh;
+    width: 100%;
     display: flex;
-    min-width: 2000px;
+    min-width: 300px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
@@ -35,59 +38,55 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
+   
 }
 
 .left h1 { 
     font-family: "Poppins";
     font-weight: 700;
-    line-height: 58px;
-    font-size: 46px;
-    position: left;
-
-    margin-bottom: 20px;
+    line-height: 1.2;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .left p {
     font-family: "Poppins";
     font-weight: 500;
-    line-height: 35px;
-    font-size: 30px;
-    text-align: left;
+    line-height: 1.2;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
-
 .left h1,p{
-    margin-left: 20px;
-}
+    margin-left: 50px;
+    }
 
 .left .btn {
     font-family: "Poppins";
     font-weight: 700;
-    line-height: 34.5px;
-    font-size: 19px;
-
-    margin-top: 10px;
+    line-height: 1.2;
+    font-size: 16px;
+    margin-top: 50px;
     background-color: transparent;
     border: solid 2px white;
     border-radius: 25px;
-    padding: 12px 52px;
+    padding: 10px 30px;
     cursor: pointer;
     margin-bottom: 20px;
     color: white;
+    text-align: center;
     align-self: center;
 }
 
-.left .btn a{
+.left .btn a {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
 }
 
-
 .right {
     background-color: #fff;
     padding: 20px;
-    flex: 5;
+    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,20 +95,11 @@ body {
 .right h2 {
     font-family: "Poppins";
     font-weight: 800;
-    line-height: 48px;
+    line-height: 1.5;
     font-size: 32px;
     color: #54B5EC;
     text-align: center;
-    margin-bottom: 80px;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    margin-bottom: 40px;
 }
 
 form {
@@ -125,7 +115,8 @@ form label {
 
 .input-container {
     position: relative;
-    width: 580px;
+    width: 100%;
+    max-width: 580px;
 }
 
 form input, form select {
@@ -161,40 +152,74 @@ form .btn {
     padding: 5px 16px;        
     width: 140px;        
     cursor: pointer;
-   margin-top: 35px;
+    margin-top: 35px;
     display: block;       
 }
 
-form .btn a{
+form .btn a {
     color: #fff;
     text-decoration: none;
 }
 
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 95vw;
+        height: 85vh;
+    }
 
-
-@media screen and (max-width: 768px) {
     .login {
         flex-direction: column;
-        width: 70%;
+        height: auto;
     }
 
-    .left,
-    .right {
-        flex: 1;
-    }
-
-    .left h1 {
-        font-size: 22px;
-    }
-
-    .left p,
-    .right p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    form input {
+    .left, .right {
         width: 100%;
+        padding: 10px;
+    }
+
+    .right {
+        padding: 20px;
+    }
+
+    .left {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .left h1 { 
+        font-family: "Poppins";
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .left p {
+        font-family: "Poppins";
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .left h1,p{
+        margin-left: 0px;
+        margin-top: 180px;
+        }
+    
+    
+    .left .btn {
+        font-size: 14px;
+        padding: 8px 20px;
+       align-items: center;
+    }
+
+    .right h2 {
+        font-size: 24px;
+    }
+
+    .input-container {
+        width: 90%;
     }
 
     form .btn {
@@ -203,9 +228,27 @@ form .btn a{
     }
 }
 
-@media screen and (max-width: 1000px){
-    .login{
+@media screen and (max-width: 768px) {
+    .left h1 {
+        font-size: 22px;
+    }
+
+    .left p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .right h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .input-container {
         width: 100%;
     }
 
+    form .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
 }

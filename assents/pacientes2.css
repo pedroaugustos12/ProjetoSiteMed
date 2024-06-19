@@ -1,4 +1,4 @@
-/* Importação da fonte Poppins do Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* Reset */
@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0; /* Cor de fundo geral */
+    background-color: #f0f0f0; 
 }
 
 main {
@@ -25,7 +25,6 @@ main {
 }
 
 
-/* Estilos para o título h2 */
 main h2 {
     position: absolute;
     top: 20px;
@@ -33,7 +32,7 @@ main h2 {
     font-size: 24px;
 }
 
-/* Estilos para o container do formulário */
+
 .form-container {
     background-color: #ffffff;
     padding: 20px;
@@ -43,7 +42,7 @@ main h2 {
     max-width: 1600px;
     margin: 40px auto;
     margin-top: 100px;
-    position: relative;
+    position: relative; 
 }
 
 /* Estilos para os títulos h4 */
@@ -75,6 +74,7 @@ main h2 {
     box-sizing: border-box;
 }
 
+
 .form-container input#codigo {
     position: absolute;
     top: 20px;
@@ -82,22 +82,7 @@ main h2 {
     width: calc(10% - 20px); 
 }
 
-
-.form-container input#bairro {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: calc(10% - 20px); 
-}
-
-
-.form-container input#estado {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: calc(10% - 20px); 
-}
-
+/* Estilos para o botão */
 .form-container button[type="submit"] {
     padding: 12px 20px;
     border: none;
@@ -129,7 +114,7 @@ main h2 {
         width: 90%;
     }
 
-    /* Ajuste responsivo para o input de código */
+  
     .form-container input#codigo {
         position: relative;
         top: auto;

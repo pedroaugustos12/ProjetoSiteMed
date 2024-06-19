@@ -184,3 +184,55 @@ p {
     justify-content: flex-start;
     gap: 14px;
 }
+
+@media (max-width: 1280px) {
+    main {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    #sidebar {
+        min-width: 60px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    #user_infos span:last-child {
+        color: #000;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+  
+    #user_avatar {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    
+    .item-description {
+        width: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 8px;
+        transition: width .6s;
+        height: 0px;
+    }
+
+    #user_infos span:last-child {
+        color: #000;
+        font-size: 10px;
+    }
+    
+    
+}

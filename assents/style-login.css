@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 body {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
-    height: 90vh;
-    width: 100vh;
+    height: 100%;
+    width: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login{
-    height: 80vh;
-    width: 100vh;
+.login {
     display: flex;
-    min-width: 2000px;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+    max-width: 1800px;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
@@ -29,7 +31,7 @@ body {
 .left {
     background-color: #54B5EC;
     color: white;
-    padding: 15px;
+    padding: 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -38,27 +40,23 @@ body {
 }
 
 .left h1 {
-    font-family: "Poppins";
     font-weight: 700;
-    line-height: 39px;
-    font-size: 36px;
-
+    line-height: 1.2;
+    font-size: 2rem;
     margin-bottom: 20px;
+  
 }
 
 .left p {
-    font-family: "Poppins";
     font-weight: 500;
-    line-height: 34.5px;
-    font-size: 25px;
+    line-height: 1.4;
+    font-size: 1.40rem;
+    
 }
 
 .left .btn {
-    font-family: "Poppins";
     font-weight: 700;
-    line-height: 34.5px;
-    font-size: 19px;
-
+    font-size: 1rem;
     margin-top: 30px;
     background-color: transparent;
     border: solid 2px white;
@@ -67,104 +65,105 @@ body {
     cursor: pointer;
     margin-bottom: 20px;
     color: white;
+    text-align: center;
 }
 
-.left .btn a{
+.left .btn a {
     text-decoration: none;
-    color: #fff;
-    cursor: pointer;
+    color: white;
 }
-
 
 .right {
     background-color: #fff;
     padding: 20px;
-    flex: 5;
+    flex: 2.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .right h2 {
-    font-family: "Poppins";
     font-weight: 800;
-    line-height: 48px;
-    font-size: 32px;
+    line-height: 1.5;
+    font-size: 2rem;
     color: #54B5EC;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 400px;
 }
 
-form label {
-    margin-bottom: 5px;
-}
-
-form input {
-    background-color: #cccccc4d;
+.input-container {
+    position: relative;
+    width: 100%;
     margin-bottom: 15px;
+}
+
+.input-container input {
+    background-color: #cccccc4d;
     padding: 14px;
-    font-size: 16px;
-    
+    font-size: 1rem;
     border: none;
-    width: 580px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.397); 
-  
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.397);
+    padding-right: 40px;
+    box-sizing: border-box;
 }
 
-form input[type=text]::placeholder,
-form input[type=password]::placeholder {
-    font-family: Arial, Helvetica, sans-serif, FontAwesome,'Font Awesome 5 Free';
+.input-container .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: FontAwesome;
+    pointer-events: none;
+    font-size: 1rem;
 }
 
-form input[type=email]::placeholder{
-    font-family: Arial, Helvetica, sans-serif, 'Font Awesome 5 Free';
-}
-
-input::placeholder{
+form input::placeholder {
+    font-family: Arial, Helvetica, sans-serif, FontAwesome, 'Font Awesome 5 Free';
     font-weight: 800;
 }
 
 form .btn {
-    font-family: "Poppins";
     font-weight: 700;
-    line-height: 34.5px;
-    font-size: 18px;
-    
-    background-color: #54B5EC;    
-    padding: 10px 16px;        
-    width: 140px;        
+    font-size: 1rem;
+    background-color: #54B5EC;
+    padding: 10px 16px;
+    width: 100%;
+    max-width: 140px;
     cursor: pointer;
-    margin: 10px 20px;  
-    display: block;       
+    margin: 10px 20px;
+    display: block;
     color: white;
+    text-align: center;
 }
-
 
 @media screen and (max-width: 768px) {
     .login {
         flex-direction: column;
-        width: 70%;
+        width: 100%;
+        height: auto;
     }
 
-    .left,
-    .right {
-        flex: 1;
+    .left, .right {
+        flex: none;
+        width: 100%;
     }
 
     .left h1 {
-        font-size: 22px;
+        font-size: 1.5rem;
     }
 
-    .left p,
-    .right p {
-        font-size: 16px;
-        line-height: 24px;
+    .left p, .right p {
+        font-size: 1rem;
+        line-height: 1.4;
     }
 
     form input {
@@ -173,13 +172,66 @@ form .btn {
 
     form .btn {
         width: 100%;
-        margin: 10px 0;
+        margin-bottom: 20px;
+     
     }
 }
 
-@media screen and (max-width: 1000px){
-    .login{
+@media screen and (max-width: 480px) {
+    .login {
+        flex-direction: column;
         width: 100%;
+        height: auto;
     }
 
+    .left, .right {
+        flex: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .left h1 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .left p {
+        font-size: 0.875rem;
+        margin-bottom: 10px;
+    }
+
+    .right h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .input-container input {
+        padding: 10px;
+        font-size: 0.875rem;
+        padding-right: 35px;
+    }
+
+    .input-container .icon {
+        font-size: 0.875rem;
+    }
+
+    form .btn {
+        font-size: 0.875rem;
+        padding: 8px 12px;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .left .btn {
+        font-size: 0.875rem;
+        padding: 10px 30px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 250px;
+    }
+    
 }

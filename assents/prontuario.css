@@ -1,7 +1,3 @@
-/* Importação da fonte Poppins do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0; /* Cor de fundo geral */
+    background-color: #f0f0f0;
 }
 
 main {
@@ -18,14 +14,12 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: calc(100% - 82px); 
+    width: calc(100% - 82px);
     margin-left: 82px;
     padding: 20px;
     position: relative;
 }
 
-
-/* Estilos para o título h2 */
 main h2 {
     position: absolute;
     top: 20px;
@@ -33,7 +27,6 @@ main h2 {
     font-size: 24px;
 }
 
-/* Estilos para o container do formulário */
 .form-container {
     background-color: #ffffff;
     padding: 20px;
@@ -46,56 +39,26 @@ main h2 {
     position: relative;
 }
 
-/* Estilos para os títulos h4 */
-.form-container h4 {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-
 .form-container label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
-/* Estilos para os inputs */
 .form-container input[type="text"],
-.form-container input[type="date"],
-.form-container input[type="email"],
-.form-container input[type="tel"],
-.form-container input[type="number"],
-.form-container select {
-    width: calc(50% - 20px); 
+.form-container textarea {
+    width: calc(50% - 20px);
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #cccccc4d ;
+    background-color: #cccccc4d;
     box-sizing: border-box;
 }
 
-.form-container input#codigo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: calc(10% - 20px); 
-}
-
-
-.form-container input#bairro {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: calc(10% - 20px); 
-}
-
-
-.form-container input#estado {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: calc(10% - 20px); 
+.form-container textarea {
+    height: 100px;
+    resize: none;
 }
 
 .form-container button[type="submit"] {
@@ -112,16 +75,39 @@ main h2 {
     right: 20px;
 }
 
+.form-container button[type="submit"]:hover {
+    background-color: #000000;
+}
+
 .form-container button a{
     text-decoration: none;
     color: #fff;
 }
 
-.form-container button[type="submit"]:hover {
-    background-color: #000000;
+
+@media (max-width: 1200px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .form-container input[type="text"],
+    .form-container textarea {
+        width: calc(100% - 20px);
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 15px;
+    }
+
+    .form-container button[type="submit"] {
+        width: calc(100% - 20px);
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+    }
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     main h2 {
         position: relative;
@@ -134,11 +120,16 @@ main h2 {
         width: 90%;
     }
 
-    /* Ajuste responsivo para o input de código */
-    .form-container input#codigo {
-        position: relative;
-        top: auto;
-        right: auto;
+    .form-container input[type="text"],
+    .form-container textarea {
         width: 100%;
+    }
+
+    .form-container button[type="submit"] {
+        width: 100%;
+        bottom: auto;
+        position: relative;
+        right: auto;
+        margin-top: 20px;
     }
 }

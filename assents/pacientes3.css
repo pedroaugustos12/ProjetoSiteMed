@@ -24,7 +24,6 @@ main {
     position: relative;
 }
 
-
 /* Estilos para o título h2 */
 main h2 {
     position: absolute;
@@ -52,7 +51,6 @@ main h2 {
     font-size: 18px;
 }
 
-
 .form-container label {
     display: block;
     margin-bottom: 8px;
@@ -75,22 +73,8 @@ main h2 {
     box-sizing: border-box;
 }
 
-.form-container input#codigo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: calc(10% - 20px); 
-}
-
-
-.form-container input#bairro {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: calc(10% - 20px); 
-}
-
-
+.form-container input#codigo,
+.form-container input#bairro,
 .form-container input#estado {
     position: absolute;
     top: 20px;
@@ -121,24 +105,45 @@ main h2 {
     background-color: #000000;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     main h2 {
         position: relative;
         top: auto;
         left: auto;
-        margin-bottom: 20px;
+       
     }
 
     .form-container {
         width: 90%;
     }
 
-    /* Ajuste responsivo para o input de código */
-    .form-container input#codigo {
+    /* Ajuste responsivo para inputs */
+    .form-container input[type="text"],
+    .form-container input[type="date"],
+    .form-container input[type="email"],
+    .form-container input[type="tel"],
+    .form-container input[type="number"],
+    .form-container select {
+        width: 100%; 
+        margin-bottom: 15px;
+    }
+
+    .form-container input#codigo,
+    .form-container input#bairro,
+    .form-container input#estado {
         position: relative;
         top: auto;
         right: auto;
-        width: 100%;
+        width: 100%; 
+        margin-bottom: 15px; 
+    }
+
+ 
+    .form-container button[type="submit"] {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%; 
+        margin-top: 20px; 
     }
 }

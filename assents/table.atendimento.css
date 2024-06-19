@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+}
+
+h2 {
+    position: fixed;
+    top: 10px;
+    left: 270px;
+    margin: 0;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.toolbar button {
+    background-color: #54B5EC;
+    border-radius: 12px;
+    border-color: transparent;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;  
+}
+
+.toolbar .search {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#table-container {
+    background-color: #EEEEEE;
+    padding: 20px;
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    width: 95%; /* Ajuste para aumentar o tamanho do container */
+    max-width: 1200px; /* Definindo largura máxima para evitar excesso em telas grandes */
+    margin: 20px auto; /* Centralizar e espaçar o container */
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    background-color: #EEEEEE;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #A7A7A7;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #EEEEEE;
+}
+
+.load-more {
+    background-color: #54B5EC;
+    border-radius: 12px;
+    border-color: transparent;
+    color: #fff;
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Media query para telas menores que 640px */
+@media (max-width: 640px) {
+    h2 {
+      display: none;
+    }
+
+    #table-container {
+        width: 100%; /* Utilizar largura total */
+        margin: 10px 0; /* Ajustar margem para espaçamento */
+    }
+}

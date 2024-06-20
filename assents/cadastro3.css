@@ -19,6 +19,9 @@ body {
     align-items: center;
 }
 
+/* GERAIS */
+
+
 .login {
     height: 80vh;
     width: 100%;
@@ -79,6 +82,9 @@ body {
 }
 
 
+/* PARTE ESQUERDA */
+
+
 .right {
     background-color: #fff;
     padding: 20px;
@@ -114,7 +120,7 @@ form label {
 .input-container {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    min-width: 400px;
 }
 
 form input[type="text"],
@@ -154,6 +160,9 @@ form .btn {
     margin-top: 20px;
     text-align: center;
 }
+
+/* PARTE DIREITA */
+
 
 @media screen and (max-width: 768px) {
     .login {
@@ -200,6 +209,12 @@ form .btn {
 
     form .btn-cds {
         width: 80%;
+    }
+
+    .input-container {
+        position: relative;
+        width: 100%;
+        min-width: 200px;
     }
 }
 

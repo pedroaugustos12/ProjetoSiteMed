@@ -89,20 +89,64 @@ th {
     border-color: transparent;
     color: #fff;
     display: block;
-    margin: 20px auto 0;
+    margin: 0 auto;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
+#patient-form {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    display: none;
+}
+
+#patient-form h3 {
+    margin-top: 0;
+}
+
+#patient-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#patient-form input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#patient-form button {
+    background-color: #54B5EC;
+    border-radius: 12px;
+    border-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
 /* Media query para telas menores que 640px */
 @media (max-width: 640px) {
     h2 {
-      display: none;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #table-container {
-        width: 100%; /* Utilizar largura total */
-        margin: 10px 0; /* Ajustar margem para espaçamento */
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #patient-form {
+        width: 95%;
     }
 }

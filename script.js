@@ -1,7 +1,7 @@
 const ufInput = document.getElementById('ufInput');
 const ufList = document.getElementById('ufList');
 
-// Lista de estados brasileiros com suas siglas
+
 const estados = [
     { sigla: 'AC', nome: 'Acre' },
     { sigla: 'AL', nome: 'Alagoas' },
@@ -32,7 +32,7 @@ const estados = [
     { sigla: 'TO', nome: 'Tocantins' }
 ];
 
-// Função para filtrar e exibir a lista de estados
+
 function mostrarListaEstados() {
     const valorInput = ufInput.value.toUpperCase();
     let html = '';
@@ -45,10 +45,10 @@ function mostrarListaEstados() {
     ufList.innerHTML = html;
 }
 
-// Event listener para capturar a entrada de texto no input
+
 ufInput.addEventListener('input', mostrarListaEstados);
 
-// Event listener para preencher o input com o valor selecionado da lista
+
 ufList.addEventListener('click', function(event) {
     if (event.target.tagName === 'LI') {
         ufInput.value = event.target.textContent.split(' - ')[0];

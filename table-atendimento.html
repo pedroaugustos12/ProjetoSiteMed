@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="side-item">
-                    <a href="#">
+                    <a href="pacientes.html">
                         <i class="fa-solid fa-person"></i>
                         <span class="item-description">
                             Pacientes
@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li class="side-item">
-                    <a href="#">
+                    <a href="sidebar.html">
                         <i class="fa-solid fa-info"></i>
                         <span class="item-description">
                             Sobre
@@ -74,16 +74,17 @@
         <h2>Atendimento</h2>
         <div id="table-container">
             <div class="toolbar">
-                <button onclick="addPatient()">+ Incluir Novo Paciente</button>
+                <button onclick="showForm()">+ Incluir Novo Paciente</button>
                 <div class="search">
                     <input type="text" placeholder="Pesquisar por nome">
                     <i class="fa fa-search" style="color: #54B5EC;"></i>
                 </div>
             </div>
             <div class="table-wrapper">
-                <table>
+                <table id="patients-table">
                     <thead>
                         <tr>
+                            <th>Nº</th>
                             <th>Nome do Paciente</th>
                             <th>Queixa Principal</th>
                             <th>Código</th>
@@ -92,24 +93,28 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>1</td>
                             <td>João Silva</td>
                             <td>Dor de cabeça</td>
                             <td>001</td>
                             <td>Enxaqueca</td>
                         </tr>
                         <tr>
+                            <td>2</td>
                             <td>Maria Oliveira</td>
                             <td>Febre</td>
                             <td>002</td>
                             <td>Gripe</td>
                         </tr>
                         <tr>
+                            <td>3</td>
                             <td>Carlos Pereira</td>
                             <td>Dor abdominal</td>
                             <td>003</td>
                             <td>Gastrite</td>
                         </tr>
                         <tr>
+                            <td>4</td>
                             <td>Ana Souza</td>
                             <td>Tosse</td>
                             <td>004</td>
@@ -120,14 +125,24 @@
             </div>
             <button class="load-more">Carregar +</button>
         </div>
+        <div id="patient-form" style="display: none;">
+            <h3>Adicionar Novo Paciente</h3>
+            <form id="new-patient-form">
+                <label for="patient-name">Nome do Paciente:</label>
+                <input type="text" id="patient-name" required><br>
+                <label for="patient-complaint">Queixa Principal:</label>
+                <input type="text" id="patient-complaint" required><br>
+                <label for="patient-code">Código:</label>
+                <input type="text" id="patient-code" required><br>
+                <label for="patient-diagnosis">Diagnóstico:</label>
+                <input type="text" id="patient-diagnosis" required><br>
+                <button type="button" onclick="addPatient()">Adicionar</button>
+                <button type="button" onclick="hideForm()">Cancelar</button>
+            </form>
+        </div>
     </main>
     
     <script src="script-sidebar.js"></script>
-    <script>
-        function addPatient() {
-            // Função para adicionar um novo paciente
-            alert("Função de adicionar novo paciente");
-        }
-    </script>
+    <script src="script-table.js"></script>
 </body>
 </html>

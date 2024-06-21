@@ -1,7 +1,7 @@
 /* Importação da fonte Poppins do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ main {
     position: relative;
 }
 
-/* Estilos para o título h2 */
+
 main h2 {
     position: absolute;
     top: 20px;
@@ -32,7 +32,7 @@ main h2 {
     font-size: 24px;
 }
 
-/* Estilos para o container do formulário */
+
 .form-container {
     background-color: #ffffff;
     padding: 20px;
@@ -45,7 +45,7 @@ main h2 {
     position: relative;
 }
 
-/* Estilos para os títulos h4 */
+
 .form-container h4 {
     margin-top: 20px;
     font-size: 18px;
@@ -57,7 +57,7 @@ main h2 {
     font-weight: 600;
 }
 
-/* Estilos para os inputs */
+
 .form-container input[type="text"],
 .form-container input[type="date"],
 .form-container input[type="email"],

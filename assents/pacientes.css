@@ -25,7 +25,6 @@ main {
 }
 
 
-/* Estilos para o título h2 */
 main h2 {
     position: absolute;
     top: 20px;
@@ -33,7 +32,7 @@ main h2 {
     font-size: 24px;
 }
 
-/* Estilos para o container do formulário */
+
 .form-container {
     background-color: #ffffff;
     padding: 20px;
@@ -46,12 +45,11 @@ main h2 {
     position: relative;
 }
 
-/* Estilos para os títulos h4 */
+
 .form-container h4 {
     margin-top: 20px;
     font-size: 18px;
 }
-
 
 .form-container label {
     display: block;
@@ -59,7 +57,7 @@ main h2 {
     font-weight: 600;
 }
 
-/* Estilos para os inputs */
+
 .form-container input[type="text"],
 .form-container input[type="date"],
 .form-container input[type="email"],
@@ -71,7 +69,7 @@ main h2 {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #cccccc4d ;
+    background-color: #cccccc4d;
     box-sizing: border-box;
 }
 
@@ -82,14 +80,12 @@ main h2 {
     width: calc(10% - 20px); 
 }
 
-
 .form-container input#bairro {
     position: absolute;
     top: 20px;
     right: 20px;
     width: calc(10% - 20px); 
 }
-
 
 .form-container input#estado {
     position: absolute;
@@ -112,7 +108,7 @@ main h2 {
     right: 20px;
 }
 
-.form-container button a{
+.form-container button a {
     text-decoration: none;
     color: #fff;
 }
@@ -122,23 +118,121 @@ main h2 {
 }
 
 /* Responsividade para telas menores */
-@media (max-width: 768px) {
-    main h2 {
+@media (max-width: 1200px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="date"],
+    .form-container input[type="email"],
+    .form-container input[type="tel"],
+    .form-container input[type="number"],
+    .form-container select,
+    .form-container input#codigo,
+    .form-container input#bairro,
+    .form-container select#estado {
+        width: calc(100% - 20px);
         position: relative;
         top: auto;
+        right: auto;
+        margin-bottom: 15px;
+    }
+
+    .form-container input#codigo,
+    .form-container input#bairro,
+    .form-container select#estado {
+        margin-top: 0px;
+    }
+
+    .form-container button[type="submit"] {
+        width: calc(100% - 20px);
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+
+    #user_infos span:last-child {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 940px){
+    #user_avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .item-description {
+        width: 0px;
+        font-size: 12px;
+        transition: width .6s;
+        height: 0px;
+    }
+
+    #user_infos span:last-child {
+        color: #000;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    main h2 {
         left: auto;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
 
     .form-container {
         width: 90%;
     }
 
-    /* Ajuste responsivo para o input de código */
-    .form-container input#codigo {
+    .form-container input#codigo,
+    .form-container input#bairro,
+    .form-container select#estado {
+        width: calc(100% - 20px);
         position: relative;
         top: auto;
         right: auto;
-        width: 100%;
+        margin-bottom: 15px;
     }
+
+    .form-container input#codigo,
+    .form-container input#bairro,
+    .form-container select#estado {
+        margin-top: 0px;
+    }
+
+    .form-container button[type="submit"] {
+        width: 100%;
+        bottom: auto;
+        position: relative;
+        right: auto;
+        margin-top: 20px;
+    }
+
+    #user_avatar {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    
+    .item-description {
+        width: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 8px;
+        transition: width .6s;
+        height: 0px;
+    }
+
+    #user_infos span:last-child {
+        color: #000;
+        font-size: 10px;
+    }
+
+    
 }

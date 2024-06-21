@@ -137,8 +137,7 @@ th {
 /* Media query para telas menores que 640px */
 @media (max-width: 640px) {
     h2 {
-        left: 50%;
-        transform: translateX(-50%);
+      display: none;
     }
 
     #table-container {

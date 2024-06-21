@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ main h2 {
     position: relative;
 }
 
-/* Estilos para os títulos h4 */
+
 .form-container h4 {
     margin-top: 20px;
     font-size: 18px;
@@ -58,7 +58,7 @@ main h2 {
     font-weight: 600;
 }
 
-/* Estilos para os inputs */
+
 .form-container input[type="text"],
 .form-container input[type="date"],
 .form-container input[type="email"],
